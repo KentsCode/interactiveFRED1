@@ -6,11 +6,14 @@
 }
 .FRED img {
     position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     
 }
-
 #hull {
-    
+    z-index: 1;
 }
 #solar-panel {
 
@@ -18,32 +21,52 @@
 #rudder {
 
 }
-.solar-panel-active {
-    -webkit-animation: solarpanelactive 1s; /* Safari 4.0 - 8.0 */
+#hull-button {
+    position: absolute;
+    bottom: 0;
+    right: 50%; 
+    /* vertical-align: bottom; */
+    z-index: 2;
+    
+}
+#solar-panel-button {
+    position: absolute;
+    bottom: 0;
+    right:25%;
+    z-index: 2;
+}
+#rudder-button {
+    position: absolute;
+    bottom: 0;
+    right:75%;
+    z-index: 2;
+}
+.activated {
+    -webkit-animation: activated 1s; /* Safari 4.0 - 8.0 */
     -webkit-animation-fill-mode: forwards; 
-    animation: solarpanelactive 1s;
+    animation: activated 1s;
     animation-fill-mode: forwards;
     /* animation-direction: alternate; */
 }
-@-webkit-keyframes solarpanelactive {
+@-webkit-keyframes activated {
     0% {top: 0px;}
     100% {top: -250px;}
 }
-@keyframes solarpanelactive {
+@keyframes activated {
     0% {top: 0px;}
     100% {top: -250px;}
 }
-.solar-panel-inactive {
-    -webkit-animation: solarpanelinactive 1s; /* Safari 4.0 - 8.0 */
+.inactivated {
+    -webkit-animation: inactivated 1s; /* Safari 4.0 - 8.0 */
     -webkit-animation-fill-mode: forwards; 
-    animation: solarpanelinactive 1s;
+    animation: inactivated 1s;
     animation-fill-mode: forwards;
 }
-@-webkit-keyframes solarpanelinactive {
+@-webkit-keyframes inactivated {
     0% {top: -250px;}
     100% {top: 0px;}
 }
-@keyframes solarpanelinactive {
+@keyframes inactivated {
     0% {top: -250px;}
     100% {top: 0px;}
 }

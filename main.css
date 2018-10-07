@@ -1,0 +1,49 @@
+.FRED {
+    position: relative;
+    display: inline-block;
+    width: 75%;
+    height: 75%;
+}
+.FRED img {
+    position: absolute;
+    
+}
+
+#hull {
+    
+}
+#solar-panel {
+
+}
+#rudder {
+
+}
+.solar-panel-active {
+    -webkit-animation: solarpanelactive 1s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-fill-mode: forwards; 
+    animation: solarpanelactive 1s;
+    animation-fill-mode: forwards;
+    /* animation-direction: alternate; */
+}
+@-webkit-keyframes solarpanelactive {
+    0% {top: 0px;}
+    100% {top: -250px;}
+}
+@keyframes solarpanelactive {
+    0% {top: 0px;}
+    100% {top: -250px;}
+}
+.solar-panel-inactive {
+    -webkit-animation: solarpanelinactive 1s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-fill-mode: forwards; 
+    animation: solarpanelinactive 1s;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes solarpanelinactive {
+    0% {top: -250px;}
+    100% {top: 0px;}
+}
+@keyframes solarpanelinactive {
+    0% {top: -250px;}
+    100% {top: 0px;}
+}
